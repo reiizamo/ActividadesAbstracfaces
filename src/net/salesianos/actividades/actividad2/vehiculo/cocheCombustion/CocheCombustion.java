@@ -21,11 +21,14 @@ public class CocheCombustion extends Vehiculo {
             System.out.println("Motor: " + this.motorCombustion);
         }else{
             this.litrosCombustible = this.litrosCombustible - 1;
+            this.motorCombustion = "encendido";
             System.out.print("Motor: " + this.motorCombustion);
             System.out.println("Un litro de combustible gastado.");
         }
     }
-    public void motor() {
+    public void pararMotor() {
+        this.motorCombustion = "apagado";
+        System.out.print("Motor: " + this.motorCombustion);
     }
     public void mover() {
     }

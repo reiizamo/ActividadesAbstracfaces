@@ -52,7 +52,7 @@ public abstract class Vehiculo {
 
     public abstract void arrancar();
 
-    public abstract void motor();
+    public abstract void pararMotor();
 
     public abstract void mover();
 }
