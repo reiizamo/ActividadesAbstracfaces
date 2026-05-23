@@ -1,6 +1,6 @@
 package net.salesianos.actividades.actividad2.vehiculo;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private String color;
     private int numeroPuertas;
     private int numeroRuedas;
@@ -49,4 +49,10 @@ public class Vehiculo {
     public int getNumeroRuedas(){
         return this.numeroRuedas;
     }
+
+    public abstract void arrancar();
+
+    public abstract void motor();
+
+    public abstract void mover();
 }
