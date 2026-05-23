@@ -11,6 +11,10 @@ public class Circulo implements CalculoGeometrico{
         this.radio = radio;
     }
 
+    public double getRadio(){
+        return this.radio;
+    }
+
     @Override
     public double calcularArea() {
         double resultado = Math.PI * Math.pow(this.radio, 2);
