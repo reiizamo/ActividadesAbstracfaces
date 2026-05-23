@@ -12,6 +12,14 @@ public class Rectangulo implements CalculoGeometrico{
         this.ancho = ancho;
     }
 
+    public double getAltura(){
+        return this.altura;
+    }
+
+    public double getAncho(){
+        return this.ancho;
+    }
+
     @Override
     public double calcularArea() {
         double resultado = this.ancho * this.altura;
