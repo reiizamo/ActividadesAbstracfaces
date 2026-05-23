@@ -14,10 +14,15 @@ public class CocheCombustion extends Vehiculo {
 
     }
 
+    public int getLitros(){
+        return this.litrosCombustible;
+    }
+
     @Override
     public void arrancar() { 
-        if(this.litrosCombustible == 0){
+        if(this.litrosCombustible <= 0){
             System.out.print("No hay combustible en el motor.");
+            this.motorCombustion = "apagado";
             System.out.println("Motor: " + this.motorCombustion);
         }else{
             this.litrosCombustible = this.litrosCombustible - 1;
@@ -31,5 +36,16 @@ public class CocheCombustion extends Vehiculo {
         System.out.print("Motor: " + this.motorCombustion);
     }
     public void mover() {
+        if(this.motorCombustion.equals("apagado")){
+            System.out.println("El motor esta: " + this.motorCombustion);
+        }else if(this.litrosCombustible <= 0){
+            System.out.print("No hay combustible en el motor.");
+            this.motorCombustion = "apagado";
+            System.out.println("Motor: " + this.motorCombustion);
+        }else {
+            this.litrosCombustible = this.litrosCombustible - 1;
+            System.out.println("Un litro de combustible gastado");
+        }
+        
     }
 }
